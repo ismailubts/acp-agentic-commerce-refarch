@@ -1,0 +1,74 @@
+[
+  {
+    "id": "prod_001",
+    "name": "Professional Laptop Bag",
+    "category": "laptop_bag",
+    "price": 89.99,
+    "shipping_eta_days": 4,
+    "inventory": 15,
+    "short_description": "Workday laptop bag with padded sleeve and quick-access pockets"
+  },
+  {
+    "id": "prod_002",
+    "name": "Slim Laptop Sleeve",
+    "category": "laptop_bag",
+    "price": 34.99,
+    "shipping_eta_days": 3,
+    "inventory": 25,
+    "short_description": "Thin water-resistant sleeve for light carry days"
+  },
+  {
+    "id": "prod_003",
+    "name": "Executive Laptop Briefcase",
+    "category": "laptop_bag",
+    "price": 119.99,
+    "shipping_eta_days": 5,
+    "inventory": 8,
+    "short_description": "Leather briefcase with dedicated laptop bay and card organizer"
+  },
+  {
+    "id": "prod_004",
+    "name": "Tech Backpack Pro",
+    "category": "backpack",
+    "price": 94.99,
+    "shipping_eta_days": 4,
+    "inventory": 12,
+    "short_description": "Backpack with USB pass-through and reinforced laptop bay"
+  },
+  {
+    "id": "prod_005",
+    "name": "Urban Commuter Backpack",
+    "category": "backpack",
+    "price": 67.99,
+    "shipping_eta_days": 3,
+    "inventory": 18,
+    "short_description": "City pack with laptop sleeve and bottle pocket"
+  },
+  {
+    "id": "prod_006",
+    "name": "Laptop Organizer Insert",
+    "category": "accessory",
+    "price": 24.99,
+    "shipping_eta_days": 2,
+    "inventory": 30,
+    "short_description": "Removable insert that turns any tote into a tech organizer"
+  },
+  {
+    "id": "prod_007",
+    "name": "Premium Laptop Bag",
+    "category": "laptop_bag",
+    "price": 109.99,
+    "shipping_eta_days": 3,
+    "inventory": 6,
+    "short_description": "Premium carry bag with reinforced seams and long-wear materials"
+  },
+  {
+    "id": "prod_008",
+    "name": "Cable Management Kit",
+    "category": "accessory",
+    "price": 19.99,
+    "shipping_eta_days": 2,
+    "inventory": 40,
+    "short_description": "Cable ties, pouches, and clips for mobile kits"
+  }
+]
