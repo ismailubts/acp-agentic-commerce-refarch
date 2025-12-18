@@ -1,0 +1,122 @@
+graph TB
+    %% User Interface Layer
+    subgraph "Human Interface Boundary"
+        UI[Streamlit UI]
+        USER[Human User]
+        USER --> UI
+    end
+
+    %% Buyer Intent Layer
+    subgraph "Buyer Intent Boundary"
+        INTENT[Intent Capture]
+        UI --> INTENT
+    end
+
+    %% Agent Decisioning Layer
+    subgraph "Agent Decisioning Boundary"
+        AGENT[Buyer Agent]
+        INTENT --> AGENT
+    end
+
+    %% Merchant Domain
+    subgraph "Merchant Control Boundary"
+        CATALOG[Product Catalog]
+        CHECKOUT[Checkout API]
+        
+        AGENT --> CATALOG
+        CATALOG --> CHECKOUT
+    end
+
+    %% Human Approval Boundary
+    subgraph "Human Approval Boundary"
+        APPROVAL[Approval Agent]
+        UI <--> APPROVAL
+        AGENT -.-> APPROVAL
+        CHECKOUT -.-> APPROVAL
+    end
+
+    %% Settlement Layer
+    subgraph "Settlement Boundary"
+        ESCROW[Mock Escrow]
+        SETTLEMENT[Settlement Engine]
+        
+        CHECKOUT --> ESCROW
+        ESCROW --> SETTLEMENT
+    end
+
+    %% Audit System
+    subgraph "Audit Boundary"
+        AUDIT[Audit Log]
+        
+        INTENT -.-> AUDIT
+        AGENT -.-> AUDIT
+        CATALOG -.-> AUDIT
+        CHECKOUT -.-> AUDIT
+        APPROVAL -.-> AUDIT
+        ESCROW -.-> AUDIT
+        SETTLEMENT -.-> AUDIT
+    end
+
+    %% Data Flow
+    %% Normal Flow
+    AGENT -->|1. Search Products| CATALOG
+    CATALOG -->|2. Product Results| AGENT
+    AGENT -->|3. Initiate Checkout| CHECKOUT
+    CHECKOUT -->|4. Process Payment| ESCROW
+    ESCROW -->|5. Hold Funds| SETTLEMENT
+    SETTLEMENT -->|6. Settlement Complete| AUDIT
+
+    %% Approval Flow
+    AGENT -.->|7. Request Approval| APPROVAL
+    APPROVAL -->|8. Human Decision| UI
+    UI -->|9. Approval Response| APPROVAL
+    APPROVAL -->|10. Continue/Stop| CHECKOUT
+
+    %% Audit Flow
+    style UI fill:#d8efe8
+    style INTENT fill:#e8f2ee
+    style AGENT fill:#cfe6dc
+    style CATALOG fill:#f3e6d4
+    style CHECKOUT fill:#f3e6d4
+    style APPROVAL fill:#e6d7c2
+    style ESCROW fill:#eef3f0
+    style SETTLEMENT fill:#eef3f0
+    style AUDIT fill:#f8f6f2
+
+    %% Boundary Labels
+    classDef boundary fill:none,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5
+    
+    class UI,INTENT,AGENT boundary
+    class CATALOG,CHECKOUT boundary  
+    class APPROVAL boundary
+    class ESCROW,SETTLEMENT boundary
+    class AUDIT boundary
+
+    %% Trust Boundary Annotations
+    note right of INTENT : "User Requirements\n& Constraints"
+    note right of AGENT : "Autonomous Shopping\nDecision Logic"
+    note right of CATALOG : "Product & Inventory\nManagement"
+    note right of APPROVAL : "Human-in-the-Loop\nControl Point"
+    note right of ESCROW : "Payment & Escrow\nSimulation"
+    note right of AUDIT : "Immutable\nTransaction Log"
+
+    %% Control Flow Indicators
+    linkStyle 0 stroke:#2196f3,stroke-width:2px
+    linkStyle 1 stroke:#2196f3,stroke-width:2px
+    linkStyle 2 stroke:#2196f3,stroke-width:2px
+    linkStyle 3 stroke:#2196f3,stroke-width:2px
+    linkStyle 4 stroke:#2196f3,stroke-width:2px
+    linkStyle 5 stroke:#2196f3,stroke-width:2px
+
+    linkStyle 6 stroke:#f44336,stroke-width:2px,stroke-dasharray: 5 5
+    linkStyle 7 stroke:#f44336,stroke-width:2px,stroke-dasharray: 5 5
+    linkStyle 8 stroke:#f44336,stroke-width:2px,stroke-dasharray: 5 5
+    linkStyle 9 stroke:#f44336,stroke-width:2px,stroke-dasharray: 5 5
+
+    linkStyle 10 stroke:#9e9e9e,stroke-width:1px,stroke-dasharray: 2 2
+    linkStyle 11 stroke:#9e9e9e,stroke-width:1px,stroke-dasharray: 2 2
+    linkStyle 12 stroke:#9e9e9e,stroke-width:1px,stroke-dasharray: 2 2
+    linkStyle 13 stroke:#9e9e9e,stroke-width:1px,stroke-dasharray: 2 2
+    linkStyle 14 stroke:#9e9e9e,stroke-width:1px,stroke-dasharray: 2 2
+    linkStyle 15 stroke:#9e9e9e,stroke-width:1px,stroke-dasharray: 2 2
+    linkStyle 16 stroke:#9e9e9e,stroke-width:1px,stroke-dasharray: 2 2
