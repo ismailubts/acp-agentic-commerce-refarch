@@ -1,5 +1,5 @@
 """
-FastAPI application for the BoundCart governed agent commerce reference.
+FastAPI application for the ACP Agentic Commerce Reference governed agent commerce reference.
 """
 
 import sys
@@ -52,7 +52,7 @@ async def lifespan(app: FastAPI):
 
 # Create FastAPI app
 app = FastAPI(
-    title="BoundCart — Governed Agent Commerce",
+    title="ACP Agentic Commerce Reference — Governed Agent Commerce",
     description="Reference implementation for governed delegation across commerce trust boundaries",
     version="1.0.0",
     lifespan=lifespan

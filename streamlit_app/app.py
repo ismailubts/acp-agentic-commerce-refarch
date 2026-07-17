@@ -1,5 +1,5 @@
 """
-BoundCart Streamlit demo — governed agent commerce oversight UI.
+ACP Agentic Commerce Reference Streamlit demo — governed agent commerce oversight UI.
 """
 
 import streamlit as st
@@ -88,7 +88,7 @@ if 'workflow_result' not in st.session_state:
 
 # Main UI
 st.set_page_config(
-    page_title="BoundCart",
+    page_title="ACP Agentic Commerce Reference",
     page_icon="◈",
     layout="wide"
 )
@@ -200,7 +200,7 @@ st.markdown(
 st.markdown(
     """
     <div class="boundcart-hero">
-      <p class="boundcart-brand">BoundCart</p>
+      <p class="boundcart-brand">ACP Agentic Commerce Reference</p>
       <p class="boundcart-tag">Governed agent commerce — shop autonomously, approve what matters, leave a clear trail.</p>
     </div>
     <div class="boundcart-rule"></div>
@@ -536,7 +536,7 @@ with settlement_col:
 st.markdown(
     """
     <div class="boundcart-footer">
-        BoundCart · Governed Agent Commerce · Demo build
+        ACP Agentic Commerce Reference · Governed Agent Commerce · Demo build
     </div>
     """,
     unsafe_allow_html=True

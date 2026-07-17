@@ -1,12 +1,14 @@
-# BoundCart — Governed Agent Commerce
+# ACP Agentic Commerce Reference — Governed Agent Commerce
 
 A hands-on reference build for autonomous shopping agents that stay inside explicit trust boundaries — with human approval where it matters.
+
+Repository: acp-agentic-commerce-refarch
 
 ## Problem Statement
 
 Most commerce stacks put every decision in one place. That works until an AI agent starts buying on someone's behalf. Then you need clear handoffs: what the agent may do alone, what needs a person, and what gets written down forever.
 
-BoundCart shows a practical pattern for **governed delegation** — agents shop within budgets and rules, merchants own checkout, humans approve risky spends, and every cross-boundary step lands in an audit trail.
+ACP Agentic Commerce Reference shows a practical pattern for **governed delegation** — agents shop within budgets and rules, merchants own checkout, humans approve risky spends, and every cross-boundary step lands in an audit trail.
 
 ## Architecture Overview
 
@@ -30,7 +32,7 @@ Six trust boundaries keep control visible:
 ## Repository Structure
 
 ```
-boundcart-agent-commerce/
+acp-agentic-commerce-refarch/
     README.md
     requirements.txt
     docs/
@@ -76,8 +78,8 @@ boundcart-agent-commerce/
 ### Installation
 
 ```bash
-git clone <repository-url>
-cd boundcart-agent-commerce
+git clone https://github.com/ismailubts/acp-agentic-commerce-refarch.git
+cd acp-agentic-commerce-refarch
 
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
@@ -110,7 +112,7 @@ python -m pytest tests/test_checkout_flow.py -q
 
 **"Buy a laptop bag under $120 with fast shipping"**
 
-1. Enter the request in the BoundCart UI
+1. Enter the request in the ACP Agentic Commerce Reference UI
 2. Agent picks **Executive Laptop Briefcase** ($119.99)
 3. Approval gate fires (price over $100)
 4. Approve or reject in the oversight panel
@@ -163,4 +165,4 @@ MIT — see `LICENSE`.
 
 ---
 
-*BoundCart is a teaching reference for governed agent commerce: autonomous where it is safe, human where it is not, and fully auditable either way.*
+*ACP Agentic Commerce Reference is a teaching reference for governed agent commerce: autonomous where it is safe, human where it is not, and fully auditable either way.*

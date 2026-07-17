@@ -1,5 +1,6 @@
 # Core Framework (minimal)
 flask==2.0.3
+streamlit>=1.39.0
 
 # Data and Validation
 python-multipart==0.0.6
