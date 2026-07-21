@@ -2,7 +2,9 @@
 
 A hands-on reference build for autonomous shopping agents that stay inside explicit trust boundaries — with human approval where it matters.
 
-Repository: acp-agentic-commerce-refarch
+Repository: [https://github.com/ismailubts/acp-agentic-commerce-refarch](https://github.com/ismailubts/acp-agentic-commerce-refarch)
+
+**Author:** [Abdul Ismail](https://github.com/ismailubts)
 
 ## Problem Statement
 
@@ -161,7 +163,7 @@ Keep the trust-boundary model intact. Autonomy is fine — as long as authority 
 
 ## License
 
-MIT — see `LICENSE`.
+Proprietary — Copyright (c) Abdul Ismail. See `LICENSE`.
 
 ---
 
